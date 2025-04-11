@@ -20,9 +20,9 @@ session_start();
 
 		<div id = "game-nav" class = "container-fluid">
 			<div class = "d-flex justify-content-end py-2">
-				<a class = "btn btn-primary mx-3" href = "./game-landing.php">The Game</a>
-				<a class = "btn btn-primary mx-3" href = "#">Proposal</a>
-				<a class = "btn btn-primary mx-3" href = "/settings.html">Profile</a>
+				<a class = "btn btn-primary mx-2" href = "./game-landing.php">The Game</a>
+				<a class = "btn btn-primary mx-2" href = "#">Proposal</a>
+				<a class = "btn btn-primary mx-2" href = "/settings.html">Profile</a>
 			</div>
 		</div>
 	</nav>

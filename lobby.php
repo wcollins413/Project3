@@ -10,7 +10,7 @@ error_reporting(E_ALL);
 $room = $_POST['room'] ?? '';
 $name = trim($_POST['name'] ?? '');
 
-$path = "rooms/$room.json";
+$path = "./rooms/$room.json";
 if (!file_exists($path)) {
     die("Room not found.");
 }
@@ -33,34 +33,33 @@ if (!in_array($name, $data['players'])) {
 <head>
 	<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
 	<link rel = "stylesheet" href = "style.css">
-	<link rel = "stylesheet" href = "style_game.css">
-	<link rel = "stylesheet" href = "/styles/general.css">
+	<link rel = "stylesheet" href = "u_style.css">
 	<title>Lobby - Room <?= htmlspecialchars($room) ?></title>
 </head>
 <body>
 	<nav id = "navbar"></nav>
 
 	<main class = "game-container">
-		<h2>Room Code: <?= htmlspecialchars($room) ?></h2>
+		<h2 style = "color: white;">Room Code: <strong><?= htmlspecialchars($room) ?></strong></h2>
 		<h3>Welcome, <?= htmlspecialchars($name) ?>!</h3>
-		<p>Waiting for players to join...</p>
+		<p style = "color: white;">Waiting for players to join...</p>
 
 		<ul id = "player-list"></ul>
 
           <?php if ($data['host'] === $name): ?>
-		    <form action = "actions/start_game.php" method = "POST">
+		    <form action = "./actions/start_game.php" method = "POST">
 			    <input type = "hidden" name = "room" value = "<?= htmlspecialchars($room) ?>">
 			    <button type = "submit">Start Game</button>
 		    </form>
           <?php endif; ?>
 
 	</main>
-	
+
 	<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script rel = "text/javascript" src = "/nav-foot.js"></script>
 	<script>
           function fetchPlayers() {
-              fetch('get_players.php?room=<?= $room ?>')
+              fetch('actions/get_players.php?room=<?= $room ?>')
                   .then(res => res.json())
                   .then(data => {
                       const list = document.getElementById("player-list");
@@ -74,7 +73,7 @@ if (!in_array($name, $data['players'])) {
           }
 
           function checkGameStart() {
-              fetch('get_status.php?room=<?= $room ?>')
+              fetch('actions/get_status.php?room=<?= $room ?>')
                   .then(res => res.json())
                   .then(data => {
                       if (data.started) {

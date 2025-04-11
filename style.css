@@ -33,14 +33,24 @@ body
 	margin-bottom: 20px;
 }
 
+.game-container h2 strong
+{
+	color: var(--primary);
+}
+
 .game-container form
 {
-	background-color: rgba(0, 0, 0, 0.1);
+	background-color: #3c3c3c;
 	border-radius: 15px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	margin: 20px auto;
 	max-width: 400px;
 	padding: 20px;
+}
+
+main.game-container /* Bypass Boostrap styling... Ensures we have control.*/
+{
+	background-color: unset;
 }
 
 body.dark-mode .game-container form
@@ -72,9 +82,39 @@ body.dark-mode .game-container form
 	transition: background 0.3s ease;
 }
 
+.game-container form button
+{
+	margin: auto 3rem;
+	min-width: 150px;
+}
+
 .game-container button:hover
 {
 	background: #ffd633;
+	color: #000000;
+}
+
+.game-container form label
+{
+	align-items: center;
+	background: #555555;
+	border-radius: 12px;
+	color: #ffffff;
+	cursor: pointer;
+	display: flex;
+	font-size: 1.05em;
+	justify-content: flex-start;
+	margin: 1rem auto;
+	max-width: 400px;
+	padding: 1rem;
+	transition: transform 0.2s ease, background 0.3s ease;
+	width: 100%;
+}
+
+.game-container label:hover
+{
+	margin-right: 12px;
+	transform: scale(1.1);
 }
 
 .game-container ul
@@ -90,18 +130,37 @@ body.dark-mode .game-container form
 	border-radius: 10px;
 	color: #ffffff;
 	margin: 5px auto;
+	min-width: 300px;
 	padding: 10px;
 	width: 80%;
 }
 
+.game-container input, .game-container select
+{
+	background-color: rgba(255, 255, 255, 0.1);
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.game-container select option
+{
+	background-color: #3c3c3c;
+	color: rgba(255, 255, 255, 0.8);
+}
+
+.game-container input::placeholder
+{
+	color: rgba(255, 255, 255, 0.5);
+}
+
 .game-container form label
 {
-	color: var(--secondary);
+	color: var(--white);
 	font-size: 1rem;
 }
 
 .game-container a
 {
+	color: var(--primary);
 	font-weight: bold;
 	text-decoration: none;
 }

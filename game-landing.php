@@ -31,28 +31,26 @@
 			</div>
 		</div>
 	</nav>
-	<main>
-		<div class = "game-container">
-			<div class = "container">
-				<h1>Most Likely To</h1>
-				<form action = "actions/join.php" method = "GET">
-					<input type = "text" class = "text" name = "room" placeholder = "Enter Room Code" required>
-					<button type = "submit">Join Game</button>
-				</form>
-				<form action = "./actions/create.php" method = "POST">
-					<label for = "theme">Choose a theme:</label>
-					<select name = "theme" required>
-						<option value = "general">General</option>
-						<option value = "college">College</option>
-						<option value = "office">Office</option>
-					</select>
-					<div>
-						<label for = "mode_code" style = "margin: 10px;"> Secret Game:</label>
-						<input type = "text" name = "mode_code"/>
-					</div>
-					<button class = "btn btn-primary" type = "submit">Create Game</button>
-				</form>
-			</div>
+	<main class = "game-container">
+		<div class = "container">
+			<h1>Most Likely To</h1>
+			<form action = "actions/join.php" method = "GET">
+				<input type = "text" class = "text" name = "room" placeholder = "Enter Room Code" required>
+				<button type = "submit">Join Game</button>
+			</form>
+			<form action = "./actions/create.php" method = "POST">
+				<label for = "theme">Choose a theme:</label>
+				<select name = "theme" required>
+					<option value = "general">General</option>
+					<option value = "college">College</option>
+					<option value = "office">Office</option>
+				</select>
+				<div>
+					<label for = "mode_code" style = "margin: 10px;"> Secret Game:</label>
+					<input type = "text" placeholder = "Enter Secret Code" name = "mode_code"/>
+				</div>
+				<button class = "btn btn-primary" type = "submit">Create Game</button>
+			</form>
 		</div>
 	</main>
 
