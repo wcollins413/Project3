@@ -19,18 +19,6 @@
 	--off-white: #be952e;
 }
 
-/*
-	I need/like these colors
- 	HOWEVER, we can change them later to something we more like
-
-	I will use the
-	--primary
-	--primary-hover
-	--secondary
-	--secondary-hover
-	--background-color
-
- */
 *
 {
 	box-sizing: border-box;
@@ -71,6 +59,11 @@ ul
 	margin-bottom: 25px;
 }
 
+.error
+{
+	color: white;
+}
+
 /*
 	Game Navbar
 
@@ -84,7 +77,6 @@ ul
 
 
 		Input styles
-
 
 
  */
@@ -178,3 +170,23 @@ main select.form-control
 	color: black;
 }
 
+.pass-div
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.pass-div input
+{
+	width: calc(100% - 1.5rem);
+}
+
+.pass-div i
+{
+	cursor: pointer;
+	font-size: 1.5rem;
+	height: 25px;
+	margin: 34px 0 auto 1rem;
+	width: 25px;
+}

@@ -7,6 +7,7 @@
 $room = $_POST['room'] ?? '';
 $path = "../rooms/$room.json";
 
+
 if (!file_exists($path)) {
     die("Room not found.");
 }
@@ -16,5 +17,7 @@ $data['game_started'] = true;
 $data['round_started'] = true;
 
 file_put_contents($path, json_encode($data));
+
+
 header("Location: ../game.php?room=$room&name=" . urlencode($data['host']));
 exit;

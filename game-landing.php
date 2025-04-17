@@ -1,4 +1,5 @@
 <?php
+session_start();
 /**
  * File: index.php
  * Description: Landing page for the game. Lets users choose a theme and create a new game room.
@@ -18,6 +19,12 @@
 
 	<title>The Game | Most Likely To</title>
 
+	<style>
+		  .game-container
+		  {
+			  max-width: 450px;
+		  }
+	</style>
 </head>
 <body>
 	<nav>
@@ -28,7 +35,7 @@
 				<a class = "btn btn-primary mx-2" href = "game-landing.php">The Game</a>
 				<a class = "btn btn-primary mx-2" href = "index.php">Proposal</a>
                       <?php if (isset($_SESSION['username'])): ?>
-				    <a class = "btn btn-primary mx-2" href = "../settings.html">Profile</a>
+				    <a class = "btn btn-primary mx-2" href = "../profile.html">Profile</a>
 				    <a class = "btn btn-primary mx-2" href = "user/logout.php">Logout</a>
                       <?php else: ?>
 				    <a class = "btn btn-primary mx-2" href = "user/login.php">Login / Sign Up</a>
@@ -41,7 +48,7 @@
 		<div class = "container">
 			<h1>Most Likely To</h1>
 			<form action = "actions/join.php" method = "GET">
-				<input class = "form-control" type = "text" class = "text" name = "room" placeholder = "Enter Room Code" required>
+				<input class = "form-control" type = "text" name = "room" placeholder = "Enter Room Code" required>
 				<button type = "submit">Join Game</button>
 			</form>
 
@@ -49,15 +56,12 @@
 				<div class = "form-group">
 					<label for = "theme">Choose a theme:</label>
 
-					<select class = "form-control" name = "theme" required>
-						<option value = "general">General</option>
-						<option value = "college">College</option>
-						<option value = "office">Office</option>
+					<select class = "form-control" id = "theme" name = "theme" required>
+						<option value = "0">General</option>
+						<option value = "1">College</option>
+						<option value = "2">Office</option>
+						<!-- I think we should append player made options here. Instead of codes?-->z
 					</select>
-				</div>
-				<div>
-					<label for = "mode_code"> Secret Game:</label>
-					<input class = "form-control" type = "text" placeholder = "Enter Secret Code" name = "mode_code"/>
 				</div>
 				<button class = "btn btn-primary" type = "submit">Create Game</button>
 			</form>
