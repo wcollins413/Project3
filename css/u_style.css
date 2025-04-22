@@ -190,3 +190,22 @@ main select.form-control
 	margin: 34px 0 auto 1rem;
 	width: 25px;
 }
+
+span#timer
+{
+	color: white;
+}
+
+.game-container .radio-options .radio-option .radio-label
+{
+	background-color: rgba(255, 255, 255, 0.1);
+	border-radius: 10px;
+	cursor: pointer;
+	margin-bottom: 0.5rem;
+	padding: 1rem;
+}
+
+.game-container .radio-options .radio-option .radio-label:hover
+{
+	background-color: rgba(255, 255, 255, 0.2);
+}

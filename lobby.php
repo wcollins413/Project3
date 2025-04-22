@@ -64,8 +64,9 @@ if (isset($_SESSION['user_id']) && $_SESSION['user_id'] == $host_user_id) {
 			<div class = "d-flex justify-content-end py-2">
 				<a class = "btn btn-primary mx-2" href = "game-landing.php">The Game</a>
 				<a class = "btn btn-primary mx-2" href = "index.php">Proposal</a>
+				<a class = "btn btn-primary mx-2" href = "features.php">Features</a>
                       <?php if (isset($_SESSION['username'])): ?>
-				    <a class = "btn btn-primary mx-2" href = "../profile.html">Profile</a>
+				    <a class = "btn btn-primary mx-2" href = "profile.php">Profile</a>
 				    <a class = "btn btn-primary mx-2" href = "user/logout.php">Logout</a>
                       <?php else: ?>
 				    <a class = "btn btn-primary mx-2" href = "user/login.php">Login / Sign Up</a>
@@ -100,27 +101,6 @@ if (isset($_SESSION['user_id']) && $_SESSION['user_id'] == $host_user_id) {
 	<script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 	<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 	<script rel = "text/javascript" src = "/nav-foot.js"></script>
-	<script>
 
-          function fetch_players() {
-              $.ajax({
-                  url: './actions/check_players.php',
-                  data: {
-                      room: "<?= $room ?>"
-                  },
-                  success: function (data) {
-                      $('#player-list').html(data);
-                  }
-              });
-          }
-
-
-          // Initial fetch
-          fetch_players();
-
-          // Set up polling intervals
-          setInterval(fetch_players, 3000);
-          setInterval(checkGameStart, 3000);
-	</script>
 </body>
 </html>

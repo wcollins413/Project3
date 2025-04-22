@@ -18,7 +18,7 @@ require_once __DIR__ . '/../db/db_connect.php';
 
 // Step 1: Check if room exists
 $stmt = $conn->prepare("SELECT * FROM games WHERE id = ? AND is_active = TRUE");
-$stmt->bind_param("i", $room);
+$stmt->bind_param("s", $room);
 $stmt->execute();
 $result = $stmt->get_result();
 

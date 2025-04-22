@@ -40,6 +40,6 @@ if (isset($_SESSION['user_id'])) {
 $stmt->execute();
 $room = $game_id;
 
-header("Location: join.php?room=$room");
+header("Location: join.php?room=$game_id");
 exit;
 ?>

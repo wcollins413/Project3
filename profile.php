@@ -1,11 +1,7 @@
 <?php
 session_start();
-/**
- * File: index.php
- * Description: Landing page for the game. Lets users choose a theme and create a new game room.
- *
- */
 ?>
+
 <!DOCTYPE html>
 <html lang = "en">
 <head>
@@ -13,16 +9,13 @@ session_start();
 	<meta content = "width=device-width, initial-scale=1, shrink-to-fit=no" name = "viewport">
 	<meta content = "ie=edge" http-equiv = "X-UA-Compatible">
 
-	<title>The Game | Most Likely To</title>
+	<link rel = "stylesheet" href = "css/style.css">
+	<link href = "css/u_style.css" rel = "stylesheet">
+	<link href = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel = "stylesheet">
+	<title>Proposal | Most Likely To</title>
 
-	<style>
-		  .game-container
-		  {
-			  max-width: 450px;
-		  }
-	</style>
 </head>
-<body>
+<body id = "game-body">
 	<nav>
 		<div id = "navbar-container"></div>
 
@@ -41,33 +34,16 @@ session_start();
 		</div>
 	</nav>
 
-	<main class = "game-container">
-		<div class = "container">
-			<h1>Most Likely To</h1>
-			<form action = "actions/join.php" method = "GET">
-				<input class = "form-control" type = "text" name = "room" placeholder = "Enter Room Code" required>
-				<button type = "submit">Join Game</button>
-			</form>
+	<main class = "game-container" style = "max-width: 1000px;">
 
-			<form action = "./actions/create.php" method = "POST">
-				<div class = "form-group">
-					<label for = "theme">Choose a theme:</label>
-
-					<select class = "form-control" id = "theme" name = "theme" required>
-						<option value = "1">General</option>
-						<option value = "2">College</option>
-						<option value = "3">Office</option>
-						<!-- I think we should append player made options here. Instead of codes?-->z
-					</select>
-				</div>
-				<button class = "btn btn-primary" type = "submit">Create Game</button>
-			</form>
-		</div>
+		<h1>Welcome <?php echo htmlspecialchars($_SESSION['username']); ?>!</h1>
+		<h2>Profile</h2>
+		<p>Here is your profile placeholder! Isn't this excited? There are so many possibilities!</p>
 	</main>
 
 	<script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 	<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	<script rel = "text/javascript" src = "/nav-foot.js"></script>
+
 	<!--
 
             Just for our navbar, and footers we will have to switch these out on each end.
@@ -83,5 +59,6 @@ session_start();
 
                 Replace my script below with yours!
         -->
+	<script rel = "text/javascript" src = "/nav-foot.js"></script>
+
 </body>
-</html>
