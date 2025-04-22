@@ -24,7 +24,7 @@ session_start();
 
 		<h1>Welcome <?php echo htmlspecialchars($_SESSION['username']); ?>!</h1>
 		<h2>Profile</h2>
-		<p>Here is your profile placeholder! Isn't this excited? There are so many possibilities!</p>
+		<p>Here is your profile placeholder! Isn't this exciting? There are so many possibilities!</p>
 	</main>
 
 	<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
