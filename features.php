@@ -11,15 +11,11 @@ session_start();
 
 	<title>Features | Most Likely To</title>
 
-	<link href = "css/style.css" rel = "stylesheet">
-	<link href = "css/u_style.css" rel = "stylesheet">
-	<link href = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel = "stylesheet">
-
 </head>
 <body id = "game-body">
 	<nav>
 		<div id = "navbar-container"></div>
-
+		<div id = "game-nav" class = "container-fluid"></div>
 	</nav>
 
 	<main class = "game-container" style = "max-width: 1000px;">
@@ -52,8 +48,7 @@ session_start();
 
               Replace my script below with yours!
       -->
-	<script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 	<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	<script rel = "text/javascript" src = "/nav-foot.js"></script>
+	<script rel = "text/javascript" src = "scripts/includes.js"></script>
 
 </body>

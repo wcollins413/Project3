@@ -57,29 +57,15 @@ while ($row = $result->fetch_assoc()) {
 <html>
 <head>
 	<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-	<link rel = "stylesheet" href = "css/style.css">
-	<link rel = "stylesheet" href = "css/u_style.css">
-	<link href = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel = "stylesheet">
+
 	<title>Most Likely To - Question</title>
 </head>
 <body>
 	<nav>
 		<div id = "navbar-container"></div>
-
-		<div id = "game-nav" class = "container-fluid">
-			<div class = "d-flex justify-content-end py-2">
-				<a class = "btn btn-primary mx-2" href = "game-landing.php">The Game</a>
-				<a class = "btn btn-primary mx-2" href = "index.php">Proposal</a>
-				<a class = "btn btn-primary mx-2" href = "features.php">Features</a>
-                      <?php if (isset($_SESSION['username'])): ?>
-				    <a class = "btn btn-primary mx-2" href = "profile.php">Profile</a>
-				    <a class = "btn btn-primary mx-2" href = "user/logout.php">Logout</a>
-                      <?php else: ?>
-				    <a class = "btn btn-primary mx-2" href = "user/login.php">Login / Sign Up</a>
-                      <?php endif; ?>
-			</div>
-		</div>
+		<div id = "game-nav" class = "container-fluid"></div>
 	</nav>
+
 	<div class = "game-container">
 		<h2>Question:</h2>
 		<h2 class = "current-question">
@@ -106,9 +92,8 @@ while ($row = $result->fetch_assoc()) {
 		</form>
 	</div>
 
-	<script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 	<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	<script rel = "text/javascript" src = "/nav-foot.js"></script>
+	<script rel = "text/javascript" src = "scripts/includes.js"></script>
 	<script>
           document.addEventListener('DOMContentLoaded', function () {
               const form = document.getElementById('voteForm');

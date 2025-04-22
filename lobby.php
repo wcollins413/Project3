@@ -51,28 +51,13 @@ if (isset($_SESSION['user_id']) && $_SESSION['user_id'] == $host_user_id) {
 <html>
 <head>
 	<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
-	<link rel = "stylesheet" href = "css/style.css">
-	<link rel = "stylesheet" href = "css/u_style.css">
-	<link href = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel = "stylesheet">
 	<title>Lobby - Room <?= substr(htmlspecialchars($room), 0, 3) . "-" . substr(htmlspecialchars($room), 3) ?></title>
 </head>
 <body>
 	<nav>
 		<div id = "navbar-container"></div>
 
-		<div id = "game-nav" class = "container-fluid">
-			<div class = "d-flex justify-content-end py-2">
-				<a class = "btn btn-primary mx-2" href = "game-landing.php">The Game</a>
-				<a class = "btn btn-primary mx-2" href = "index.php">Proposal</a>
-				<a class = "btn btn-primary mx-2" href = "features.php">Features</a>
-                      <?php if (isset($_SESSION['username'])): ?>
-				    <a class = "btn btn-primary mx-2" href = "profile.php">Profile</a>
-				    <a class = "btn btn-primary mx-2" href = "user/logout.php">Logout</a>
-                      <?php else: ?>
-				    <a class = "btn btn-primary mx-2" href = "user/login.php">Login / Sign Up</a>
-                      <?php endif; ?>
-			</div>
-		</div>
+		<div id = "game-nav" class = "container-fluid"></div>
 	</nav>
 	<main class = "game-container">
 		<h2 style = "color: white;">Room Code:
@@ -96,11 +81,10 @@ if (isset($_SESSION['user_id']) && $_SESSION['user_id'] == $host_user_id) {
 
 	</main>
 
-	<!-- TODO Add a Leave Game Button and a Kick Player Button -->
+	<!-- TODO Add a Leave Game Button and a Kick Player Button -->ss
 
-	<script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 	<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	<script rel = "text/javascript" src = "/nav-foot.js"></script>
+	<script rel = "text/javascript" src = "scripts/includes.js"></script>
 
 </body>
 </html>

@@ -57,27 +57,12 @@ if ($voter_id && $vote_for_id) {
 	<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
 	<title>Waiting for Others</title>
 
-	<link rel = "stylesheet" href = "css/style.css">
-	<link rel = "stylesheet" href = "css/u_style.css">
-	<link href = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel = "stylesheet">
 </head>
 <body>
 	<nav>
 		<div id = "navbar-container"></div>
 
-		<div id = "game-nav" class = "container-fluid">
-			<div class = "d-flex justify-content-end py-2">
-				<a class = "btn btn-primary mx-2" href = "game-landing.php">The Game</a>
-				<a class = "btn btn-primary mx-2" href = "index.php">Proposal</a>
-				<a class = "btn btn-primary mx-2" href = "features.php">Features</a>
-                      <?php if (isset($_SESSION['username'])): ?>
-				    <a class = "btn btn-primary mx-2" href = "profile.php">Profile</a>
-				    <a class = "btn btn-primary mx-2" href = "user/logout.php">Logout</a>
-                      <?php else: ?>
-				    <a class = "btn btn-primary mx-2" href = "user/login.php">Login / Sign Up</a>
-                      <?php endif; ?>
-			</div>
-		</div>
+		<div id = "game-nav" class = "container-fluid"></div>
 	</nav>
 	<main class = "game-container">
 		<h2>✅ Your vote has been recorded!</h2>
@@ -100,8 +85,8 @@ if ($voter_id && $vote_for_id) {
 	</style>
 
 	<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	<script src = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-	<script src = "/nav-foot.js"></script>
+	<script rel = "text/javascript" src = "scripts/includes.js"></script>
+
 	<script>
           function checkVotes() {
               fetch('actions/check_votes.php?room=<?= $room ?>')
