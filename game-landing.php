@@ -19,8 +19,7 @@ if (isset($_SESSION['user_id'])) {
     }
 }
 ?>
-?>
-<!DOCTYPE html>
+?><!DOCTYPE html>
 <html lang = "en">
 <head>
 	<meta charset = "utf-8">
@@ -59,13 +58,13 @@ if (isset($_SESSION['user_id'])) {
 						    <option value = "1">General</option>
 						    <option value = "2">College</option>
 						    <option value = "3">Office</option>
-							<?php if (!empty($custom_sets)): ?>
-								<optgroup label="Your Custom Sets">
-									<?php foreach ($custom_sets as $set): ?>
-										<option value="<?= $set['id'] ?>"><?= htmlspecialchars($set['set_name']) ?></option>
-									<?php endforeach; ?>
-								</optgroup>
-							<?php endif; ?>
+                                      <?php if (!empty($custom_sets)): ?>
+							  <optgroup label = "Your Custom Sets">
+                                                <?php foreach ($custom_sets as $set): ?>
+									<option value = "<?= $set['id'] ?>"><?= htmlspecialchars($set['set_name']) ?></option>
+                                                <?php endforeach; ?>
+							  </optgroup>
+                                      <?php endif; ?>
 					    </select>
 				    </div>
 				    <button class = "btn btn-primary" type = "submit">Create Game</button>
