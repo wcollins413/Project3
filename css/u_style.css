@@ -219,3 +219,26 @@ span#timer
 		text-align: center;
 	}
 }
+
+/*
+ Helper from my stuff
+ 	- Tyler
+ */
+.split
+{ /*  Helper (used mainly for input groups to split them up) */
+	display: flex;
+	gap: 1rem;
+	padding: 0;
+	width: 100%;
+}
+
+.split .split
+{
+	margin: 0;
+}
+
+.split > *
+{
+	flex: 0 0 calc(50% - 0.5rem); /* Exact 50% minus half of the gap */
+	width: 50%;
+}
