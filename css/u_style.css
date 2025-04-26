@@ -210,6 +210,20 @@ span#timer
 	background-color: rgba(255, 255, 255, 0.2);
 }
 
+.game-container textarea
+{
+	background-color: rgba(255, 255, 255, 0.1);
+	border-radius: 1rem;
+	color: white;
+}
+
+.game-container textarea:focus
+{
+	background-color: rgba(0, 0, 0, 0.1);
+	border-radius: 1rem;
+	color: white;
+}
+
 @media (max-width: 600px)
 {
 	.game-nav a.btn.btn-primary.mx-2.subnav-btn
